@@ -3,8 +3,9 @@ python:
   - "3.3"
   - "3.4"
   - "3.5"
+before_install:
+  - "sudo apt-get install tor"
 install:
-  - "apt-get install tor"
   - "pip install coveralls"
 script: "coverage run --source=MultiTorProxy Tests.py"
 after_success:
