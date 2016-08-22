@@ -8,7 +8,7 @@ import subprocess
 
 class MultiTorProxy:
     def __init__(self, listen_port=53000, listen_address='localhost', max_connections=10, tor_instaces=7,
-                 tor_start_port=54000, recv_buffer_size=4096):
+                 tor_start_port=53001, recv_buffer_size=4096):
         self.listen_port = listen_port
         self.listen_address = listen_address
         self.max_connections = max_connections
