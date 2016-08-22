@@ -1,0 +1,12 @@
+language: python
+python:
+  - "3.3"
+  - "3.4"
+  - "3.5"
+install:
+  - "apt-get install tor"
+  - "pip install coveralls"
+script: "coverage run --source=MultiTorProxy Tests.py"
+after_success:
+  - coveralls
+  - bash <(curl -s https://codecov.io/bash)
